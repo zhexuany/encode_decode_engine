@@ -1,0 +1,36 @@
+
+File:
+alloc.h & alloc.c
+the implementation about new memory allocator. With these files, we do not need check the return value of malloc when we call it every time.
+
+codec.c & codec.h
+the implementation about helper functions, encodeDir and decodeDir function.
+
+codec_4061.c
+driver function. Extract the flag operation from argument vector. And then use switch statement to call different function for either decoding or encoding directory.
+
+makeargv.h
+cited from textbook
+
+Purpose:
+this program will recursively travel a given directory and either
+decode or encode file according to the flag option specified before
+running. In the process of running this program, it will write
+summary of each file into a report file. At then end of this program,
+we fork two child process and call system call sort and rm.  sort is
+for sorting contents inside temporarily report file. After we sort
+the temporarily file, rm will be used to delete the temporarily
+report file.
+
+
+How to compile the program:
+  Please make sure you have downloaded all the .c files, makefile and .h files, before you start to grade this assignment.
+  In addition, all files must be in the same directory. Then type “make” on the shell and makefile will compile the program automatically.
+  Our makefile will automatically compile all .c and .h file even
+  they are belong to us. So, please make sure there are no extra .c
+  or .h files.
+
+
+-Use the program from the shell
+	(syntax): ./codec_4061 <flag option> some-directory outputfile
+  
